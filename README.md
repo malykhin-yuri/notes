@@ -1,2 +1,3 @@
 # notes
-Notes on math topics
+This is an alternative to my modest mathematical blog:
+https://malykhinmath.wordpress.com
