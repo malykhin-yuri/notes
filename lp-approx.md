@@ -3,10 +3,10 @@
 Here we will discuss basic properties of the $\ell_p^N$ space related to the Approximation theory.
 Let us recall that the norm in $\ell_p^N$ is defined as:
 ```math
-\|x\|_p := \begin{cases}
- (\sum_{k=1}^n |x_k|^p)^{1/p},\quad 1\le p<\infty,
- \max|x_k|,\quad p=\infty.
-\end{cases}
+\|x\|_p :=  (\sum_{k=1}^n |x_k|^p)^{1/p},\quad 1\le p<\infty,
+```
+```math
+\|x\|_\infty := \max|x_k|.
 ```
 
 ## Basic inequalities
@@ -26,17 +26,20 @@ We have the equality only in the case $a_1=a_2=\ldots=a_n$.
 ```math
 |\langle x,y\rangle| \le \|x\|_p \|y\|_{p'}.
 ```
-This is obvious when $p=1$ or $p=\infty$. Let $1<p<\infty$. We can assume that $x_k,y_k\ge 0$ (if we replace coordinates by their modules, the rhs of the inequality will not change and lhs will increase). Put $a_1 := x_1^p$, $w_1 = 1/p$, $a_2 = y_1^{p'}$, $w_2=1/p'$ and apply the AGM inequality: $x_1y_1 \le x_1^p/p + y_1^{p'}/p'$. If we sum over all coordinates, we will obtain:
+This is obvious when $p=1$ or $p=\infty$. Let $1 < p < \infty$.
+We can assume that $x_k,y_k\ge 0$ (if we replace coordinates by their modules, the rhs of the inequality will not change and lhs will increase).
+Put $a_1 := x_1^p$, $w_1 = 1/p$, $a_2 = y_1^{p'}$, $w_2=1/p'$ and apply the AGM inequality: $x_1y_1 \le x_1^p/p + y_1^{p'}/p'$.
+If we sum over all coordinates, we will obtain:
 ```math
-\langle x,y\rangle \le \|x\|_p^p/p + \|y\|_{p'}^{p'}/p'.
+\langle x,y\rangle \le \frac1p\|x\|_p^p + \frac1{p'}\|y\|_{p'}^{p'}.
 ```
-Holder inequality is homogenius so we can normalize it by $\|x\|_p=\|y\|_{p'}=1$. Then we obtain $\langle x,y\rangle \le 1/p+1/p'=1$, as required.
+Holder inequality is homogenius so we can normalize it by $`\|x\|_p=\|y\|_{p'}=1`$. Then we obtain $\langle x,y\rangle \le 1/p+1/p'=1$, as required.
 
 **Duality**
 ```math
 \|x\|_p = \max_{\|z\|_{p'}\le 1}\langle x,z\rangle = \max_z \langle x,z\rangle / \|z\|_{p'}
 ```
-Indeed, Holder inequality gives $\ge$. The equality holds for $z_k=|x_k|^{p'}\sign x_k$ (???)
+Indeed, Holder inequality gives $\ge$. The equality holds for $z_k=|x_k|^{p'}\mathrm{sign} x_k$ (???)
 
 ## References
 
